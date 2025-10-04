@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<System>
+  <P Name="Location">[-1, -8, 1921, 1033]</P>
+  <P Name="Open">on</P>
+  <P Name="ReportName">simulink-default.rpt</P>
+  <P Name="SIDHighWatermark">6</P>
+  <Block BlockType="DataTypeConversion" Name="Data Type Conversion" SID="5">
+    <P Name="Position">[570, 313, 645, 347]</P>
+    <P Name="ZOrder">145</P>
+    <P Name="OutDataTypeStr">double</P>
+    <P Name="LockScale">on</P>
+    <P Name="RndMeth">Floor</P>
+    <P Name="SaturateOnIntegerOverflow">off</P>
+  </Block>
+  <Block BlockType="Reference" Name="Scope" SID="4">
+    <PortCounts in="3"/>
+    <P Name="Position">[695, 159, 885, 291]</P>
+    <P Name="ZOrder">144</P>
+    <P Name="LibraryVersion">1.20.00</P>
+    <P Name="UserDataPersistent">on</P>
+    <P Name="UserData" Ref="bdmxdata:UserData_4"/>
+    <P Name="SourceBlock">Visualization/Scope</P>
+    <P Name="SourceType">g.SCOPE</P>
+    <P Name="SourceProductName">g.HIsys</P>
+    <InstanceData>
+      <P Name="MultithreadedSim">auto</P>
+    </InstanceData>
+  </Block>
+  <Block BlockType="ToFile" Name="To File" SID="6">
+    <PortCounts in="1"/>
+    <P Name="Position">[775, 315, 940, 345]</P>
+    <P Name="ZOrder">146</P>
+    <P Name="Filename">Lab2_Experiment1_Group1.mat</P>
+    <P Name="MatrixName">y</P>
+  </Block>
+  <Block BlockType="Reference" Name="g.HIamp g.Nautilus g.USBamp" SID="1">
+    <PortCounts out="1"/>
+    <P Name="Position">[300, 142, 445, 218]</P>
+    <P Name="ZOrder">107</P>
+    <P Name="BackgroundColor">[0.827451, 0.866667, 0.890196]</P>
+    <P Name="LibraryVersion">1.20.00</P>
+    <P Name="UserDataPersistent">on</P>
+    <P Name="UserData" Ref="bdmxdata:UserData_1"/>
+    <P Name="SourceBlock">DataAcquisition/g.HIamp g.Nautilus g.USBamp</P>
+    <P Name="SourceType">Multi Device DAQ</P>
+    <P Name="SourceProductName">g.HIsys</P>
+    <InstanceData>
+      <P Name="MultithreadedSim">auto</P>
+      <P Name="cfgUpdated">739878.5079</P>
+      <P Name="numDevices">2</P>
+      <P Name="deviceSR">[500 250 ]</P>
+      <P Name="deviceChannels">[9 4 ]</P>
+      <P Name="numSR">[2 ]</P>
+      <P Name="SRIndexPerDevice">[1 0 ]</P>
+    </InstanceData>
+  </Block>
+  <Line>
+    <P Name="ZOrder">1</P>
+    <P Name="Src">1#out:1</P>
+    <P Name="Points">[33, 0]</P>
+    <Branch>
+      <P Name="ZOrder">3</P>
+      <P Name="Points">[0, 150]</P>
+      <P Name="Dst">5#in:1</P>
+    </Branch>
+    <Branch>
+      <P Name="ZOrder">2</P>
+      <P Name="Dst">4#in:1</P>
+    </Branch>
+  </Line>
+  <Line>
+    <P Name="ZOrder">4</P>
+    <P Name="Src">5#out:1</P>
+    <P Name="Dst">6#in:1</P>
+  </Line>
+</System>
