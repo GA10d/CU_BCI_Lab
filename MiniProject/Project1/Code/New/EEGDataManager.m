@@ -116,6 +116,17 @@ classdef EEGDataManager
             target_data = eeg_signal.y(11:11,:);
         end
 
+        function [time_data,signal_data,trigger_data,target_data]=get_data_part2(data_path)
+            eeg_signal = EEGDataManager.load_data(data_path);
+            fn = fieldnames(eeg_signal);  
+            data = eeg_signal.(fn{1});   
+
+            time_data = data(1:1,:);
+            signal_data = data(2:9,:);
+            trigger_data = data(10:10,:);
+            target_data = data(11:11,:);
+        end
+
         function [m, n] = trigger_alignment(trigger, target)  
             j = 0; m = zeros(1, length(trigger)); %non-target
             k = 0; n = zeros(1, length(trigger)); %target

@@ -1,0 +1,42 @@
+# ===== 实验数据（受试者 EEG 记录、训练好的分类器等，敏感，不上传） =====
+*.mat
+*.set
+*.fdt
+*.edf
+*.gdf
+*.hdr
+
+# g.tec 采集设备产生的日志 / 设备配置
+MDDAQsl.txt
+UB-*
+cfg_Amplifier.xml
+currentCFG_*.cfg
+diary
+
+# ===== 大体积媒体 / 压缩包（可再生成或为重复提交） =====
+*.wav
+*.mov
+*.mp4
+*.zip
+
+# ===== 课程材料 / 第三方工具箱 =====
+LabInstruction*.pdf
+eeglab*/
+
+# ===== MATLAB / Simulink 缓存与临时文件 =====
+slprj/
+*.slxc
+*.autosave
+*.asv
+*.m~
+*.mex*
+untitled*.m
+Copy_of_*.m
+**/useless/
+
+# ===== 系统 / 日志 =====
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
